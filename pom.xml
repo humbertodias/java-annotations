@@ -12,6 +12,8 @@
         <module>annotation-processing</module>
         <module>annotation-user</module>
         <module>annotation-proxy</module>
+        <module>annotation-byte-buddy</module>
+        <module>annotation-aopalliance</module>
     </modules>
 
     <properties>
@@ -49,6 +51,8 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
+
+
 
         </plugins>
 

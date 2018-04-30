@@ -38,3 +38,8 @@ https://www.youtube.com/watch?v=tlcF8awgUEE
 https://plumbr.io/blog/java/how-to-shoot-yourself-in-the-foot-building-a-java-agent
 
 http://bytebuddy.net/#/tutorial
+
+http://www.baeldung.com/byte-buddy
+
+
+http://musingsofaprogrammingaddict.blogspot.com.es/2009/01/guice-tutorial-part-2-method.html
