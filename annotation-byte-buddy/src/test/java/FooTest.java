@@ -1,15 +1,16 @@
 import com.annotation.Bar;
 import com.annotation.Foo;
+import com.annotation.MyAnnotation;
 import net.bytebuddy.ByteBuddy;
 import net.bytebuddy.agent.ByteBuddyAgent;
+import net.bytebuddy.dynamic.DynamicType;
 import net.bytebuddy.dynamic.loading.ClassReloadingStrategy;
 import net.bytebuddy.implementation.FixedValue;
 import net.bytebuddy.implementation.MethodDelegation;
+import net.bytebuddy.matcher.ElementMatchers;
 import org.junit.Test;
 
-import static net.bytebuddy.matcher.ElementMatchers.isDeclaredBy;
-import static net.bytebuddy.matcher.ElementMatchers.named;
-import static net.bytebuddy.matcher.ElementMatchers.returns;
+import static net.bytebuddy.matcher.ElementMatchers.*;
 import static org.junit.Assert.assertEquals;
 
 public class FooTest {
@@ -43,12 +44,31 @@ public class FooTest {
                 .load(
                         Foo.class.getClassLoader(),
                         ClassReloadingStrategy.fromInstalledAgent());
-
         Foo f = new Foo();
 
         assertEquals(f.sayHelloFoo(), "Hello Foo Redefined");
 
     }
 
+    @Test
+    public void agentAnnoatadedTest() {
+
+        ByteBuddyAgent.install();
+
+        new ByteBuddy()
+                .redefine(Foo.class)
+                .method(isAnnotatedWith(MyAnnotation.class))
+                .intercept(FixedValue.value("X"))
+                .make()
+                .load(
+                        Foo.class.getClassLoader(),
+                        ClassReloadingStrategy.fromInstalledAgent());
+
+        Foo f = new Foo();
+
+        assertEquals("X",f.sayHelloAnnotated("World"));
+        assertEquals("Hello in Foo!", f.sayHelloFoo());
+
+    }
 
 }

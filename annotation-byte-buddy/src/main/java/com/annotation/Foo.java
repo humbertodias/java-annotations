@@ -6,4 +6,8 @@ public class Foo {
         return "Hello in Foo!";
     }
 
+    @MyAnnotation
+    public String sayHelloAnnotated(String msg){
+        return "Annotaded " + msg;
+    }
 }
