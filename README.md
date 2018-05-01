@@ -44,5 +44,7 @@ http://www.baeldung.com/byte-buddy
 
 http://musingsofaprogrammingaddict.blogspot.com.es/2009/01/guice-tutorial-part-2-method.html
 
+https://ivanyu.me/blog/2017/11/04/java-agents-javassist-and-byte-buddy/
 
 https://amorypepelu.github.io/2017/08/28/1.Byte-Buddy%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/
+
