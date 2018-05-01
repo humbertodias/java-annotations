@@ -4,20 +4,20 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <artifactId>annotation-processing</artifactId>
+
+    <parent>
+        <artifactId>parent</artifactId>
+        <groupId>com.annotations</groupId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../</relativePath>
+    </parent>
+
+
     <build>
         <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.5.1</version>
-                <configuration>
-                    <forceJavacCompilerUse>true</forceJavacCompilerUse>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                </configuration>
-            </plugin>
 
             <!-- Run annotation processors on src/main/java sources -->
+            <!--
             <plugin>
                 <groupId>org.bsc.maven</groupId>
                 <artifactId>maven-processor-plugin</artifactId>
@@ -27,10 +27,8 @@
                         <id>process</id>
                         <goals>
                             <goal>process</goal>
-                            <goal>process-test</goal>
                         </goals>
-                        <!--<phase>generate-sources</phase>-->
-                        <phase>compile</phase>
+                        <phase>generate-sources</phase>
                         <configuration>
                             <addCompileSourceRoots>true</addCompileSourceRoots>
                             <processors>
@@ -40,18 +38,12 @@
                     </execution>
                 </executions>
             </plugin>
-
+            -->
 
         </plugins>
     </build>
 
 
-    <parent>
-        <artifactId>parent</artifactId>
-        <groupId>com.annotations</groupId>
-        <version>1.0.0-SNAPSHOT</version>
-        <relativePath>../</relativePath>
-    </parent>
 
     <dependencies>
         <dependency>

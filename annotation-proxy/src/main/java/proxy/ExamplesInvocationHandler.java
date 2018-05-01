@@ -12,6 +12,33 @@ public class ExamplesInvocationHandler implements InvocationHandler {
     private Examples examples = new ExamplesImpl();
 
     // ******************************
+    // Inner classes
+    // ******************************
+        private class ExamplesImpl implements Examples {
+            @Override
+            public String thisIsAMethod() {
+                return ("thisIsAMethod called!");
+            }
+
+            @Override
+            public String thisIsAnotherMethod(String something) {
+                return("thisIsAnotherMethod called!");
+            }
+
+            @Override
+            public String thisIsALongRunningMethod() {
+                try {
+                    Thread.sleep(5000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+
+                return ("thisIsALongRunningMethod called!");
+            }
+        }
+
+
+    // ******************************
     // Public methods
     // ******************************
     @Override

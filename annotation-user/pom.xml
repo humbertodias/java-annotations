@@ -12,6 +12,7 @@
     </parent>
 
     <dependencies>
+
         <dependency>
             <groupId>com.annotations</groupId>
             <artifactId>annotation-processing</artifactId>

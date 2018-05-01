@@ -2,10 +2,10 @@ package proxy;
 
 public interface Examples {
     @Clocking
-    void thisIsAMethod();
+    String thisIsAMethod();
 
-    void thisIsAnotherMethod(String something);
+    String thisIsAnotherMethod(String something);
 
     @Clocking
-    void thisIsALongRunningMethod();
+    String thisIsALongRunningMethod();
 }

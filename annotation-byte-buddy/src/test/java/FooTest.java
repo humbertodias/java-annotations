@@ -32,7 +32,7 @@ public class FooTest {
     }
 
     @Test
-    public void agentLoadedInterceptTest() throws IllegalAccessException, InstantiationException {
+    public void agentLoadedInterceptTest() {
 
         ByteBuddyAgent.install();
         new ByteBuddy()
