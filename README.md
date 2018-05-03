@@ -50,3 +50,5 @@ https://amorypepelu.github.io/2017/08/28/1.Byte-Buddy%E5%9F%BA%E7%A1%80%E6%93%8D
 
 https://www.slideshare.net/tdc-globalcode/tdc2016poa-trilha-java-introduo-ao-byteman
 
+https://developer.jboss.org/wiki/ABytemanTutorial
+

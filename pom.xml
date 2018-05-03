@@ -15,6 +15,7 @@
         <module>annotation-proxy</module>
         <module>annotation-byte-buddy</module>
         <module>annotation-aopalliance</module>
+        <module>annotation-byteman</module>
     </modules>
 
     <properties>
