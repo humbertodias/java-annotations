@@ -52,3 +52,9 @@ https://www.slideshare.net/tdc-globalcode/tdc2016poa-trilha-java-introduo-ao-byt
 
 https://developer.jboss.org/wiki/ABytemanTutorial
 
+https://qiita.com/opengl-8080/items/e5244ff862219df8b142
+
+https://github.com/bytemanproject/byteman/blob/master/docs/asciidoc/src/main/asciidoc/chapters/Byteman-Rule-Language.adoc
+
+https://flowchart.js.org/
+
